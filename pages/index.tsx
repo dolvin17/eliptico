@@ -1,25 +1,26 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import profilePic from '../public/eliptico.svg'
 
 export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>ELIPTIC♼L </title>
-        <meta name="description" content="Generated to improve our world" />
-        <link rel="icon" href="/favicon.ico" />
+	  <Image
+        src={profilePic}
+        alt=""
+      />
+		<p className={styles.description}>
+          Let's explore the concept{' '}
+        {/* <code className={styles.code}>pages/index.tsx</code>*/}
+        </p>
+        <meta name="description" content="Created to improve our world" />
       </Head>
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <a href="https://recycled-container.dolvin17.repl.co/"> ELIPTIC♼L !</a>
         </h1>
-
-        <p className={styles.description}>
-          Let's explore the concept{' '}
-        {/* <code className={styles.code}>pages/index.tsx</code>*/}
-        </p>
 
         <div className={styles.grid}>
           <a href="https://geoportal.madrid.es/IDEAM_WBGEOPORTAL/visor_ide.iam?ArcGIS=https://sigma.madrid.es/hosted/rest/services/RESIDUOS/PUNTOS_LIMPIOS/MapServer" className={styles.card}>
@@ -55,10 +56,6 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
         </a>
       </footer>
     </div>
